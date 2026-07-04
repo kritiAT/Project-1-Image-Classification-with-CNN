@@ -1,13 +1,27 @@
 # Project 1: Image Classification with CNN
 
 ## About
-This project implements and evaluates multiple Convolutional Neural Network (CNN) architectures for image classification on the CIFAR-10 dataset. Three models, including a transfer learning approach based on MobileNetV2, are compared to identify the best-performing architecture.
+This project implements and evaluates multiple Convolutional Neural Network (CNN) architectures for image classification on the CIFAR-10 dataset. Three models, including a transfer learning approach based on MobileNetV2, are compared to identify the best-performing architecture. The selected model is deployed as an interactive Streamlit web application for real-time image classification.
 
-## Problem Statement
+### Problem Statement
 - Dataset used: CIFAR-10
 - Task: Multi-class image classification
-- Goal: Train a model that can classify 10 object categories from RGB images.
+- Goal: Train and evaluate CNN models capable of classifying images into one of 10 object categories, select the best-performing model, and deploy it as a web application for interactive image prediction.
 
+### Live Demo
+Try the deployed Streamlit application here:
+
+**🔗 Hugging Face Space:** https://huggingface.co/spaces/KritiAmin/img_classifier_app
+
+The app allows users to:
+- Upload one or more images.
+- Select from sample images included with the project.
+- Predict the image class using the trained MobileNetV2 model.
+- Display prediction confidence scores.
+
+#### Application Preview
+
+![Streamlit App](files/app_preview.png)
 
 ---
 
@@ -126,8 +140,8 @@ streamlit run app.py
 Project-1-Image-Classification-with-CNN/
 │
 ├── app.py                         # Streamlit app for image upload and prediction
-├── datasets/
-│   └── cifar10.npz                # CIFAR-10 dataset used for training and evaluation
+├── requirements.txt               # Project dependencies
+├── README.md                      # Project documentation
 │
 ├── models/                        # Saved keras models
 │   ├── model_1.keras
@@ -140,7 +154,12 @@ Project-1-Image-Classification-with-CNN/
 │   ├── mobilenetv2_transfer_model.ipynb   # Transfer learning with MobileNetV2
 │   └── experimental_models.ipynb          # CNN architecture experimentation
 │
-└── sample_images/                # Sample images for testing the Streamlit app
+├── files/
+│   ├── Project_Presentation.pptx   # Project presentation
+│   └── app_preview.png             # Streamlit app screenshot
+│
+└── sample_images/                  # Sample images for testing the Streamlit app
+
 ```
 
 
@@ -148,10 +167,10 @@ Project-1-Image-Classification-with-CNN/
 
 ## Future Improvements
 
-- Experiment with EfficientNet and ResNet
+- Experiment with pre.trained models like EfficientNet and ResNet
 - Perform automated hyperparameter tuning
+- Improve interface and user experience of the deployed application.
 - Add Grad-CAM visualizations
-- Deploy the model to the cloud
 - Improve inference speed
 
 ---
@@ -165,6 +184,8 @@ Project-1-Image-Classification-with-CNN/
 - Matplotlib
 - Scikit-learn
 - Streamlit
+- Hugging Face Spaces
+- Docker
 - Pandas
 
 ## Author / Contact
